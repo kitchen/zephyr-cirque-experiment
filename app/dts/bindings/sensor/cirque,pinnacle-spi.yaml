@@ -1,0 +1,17 @@
+# Copyright (c) 2021 Jeremy Kitchen
+# SPDX-License-Identifier: Apache-2.0
+
+compatible: "cirque,pinnacle"
+
+description: |
+    Cirque Pinnacle controller for Glidepoint trackpads
+
+include: spi-device.yaml
+properties:
+    irq-gpios:
+        type: phandle-array
+        required: false
+        description: HW_DR (hardware data ready) pin
+
+            This pin goes high when there is touch data ready to be sent
+            by the trackpad.
